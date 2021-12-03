@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Goal : MonoBehaviour
 {
 
-    private int requiredObjects = 2;
+    private int requiredObjects = 4;
+    public GameObject panel;
     public CollectableManager manager;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player" && requiredObjects == manager.getCollectable())
         {
-            Debug.Log("You've finished the Level!");
+            panel.SetActive(true);
         }
         else
         {
