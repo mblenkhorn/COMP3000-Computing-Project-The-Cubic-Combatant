@@ -5,11 +5,13 @@ using UnityEngine;
 public class CollectableManager : MonoBehaviour
 {
     public int collectableAmount = 0;
+    public UI collectText;
 
     public void CollectObject()
     {
         collectableAmount++;
-        Debug.Log(collectableAmount);
+        collectText.UpdateText();
+        
     }
 
     public int getCollectable()
@@ -17,15 +19,9 @@ public class CollectableManager : MonoBehaviour
         return collectableAmount;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        collectText = FindObjectOfType<UI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }
