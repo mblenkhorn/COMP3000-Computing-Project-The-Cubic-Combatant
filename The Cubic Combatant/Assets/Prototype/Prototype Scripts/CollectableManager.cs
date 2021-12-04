@@ -23,5 +23,4 @@ public class CollectableManager : MonoBehaviour
     {
         collectText = FindObjectOfType<UI>();
     }
-
 }

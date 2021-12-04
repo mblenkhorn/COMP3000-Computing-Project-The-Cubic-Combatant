@@ -5,11 +5,12 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
     public CollectableManager manager;
+    private float rotateSpeed = 90f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
