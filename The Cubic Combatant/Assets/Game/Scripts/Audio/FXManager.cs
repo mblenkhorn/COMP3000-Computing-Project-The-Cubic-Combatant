@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FXManager : MonoBehaviour
+public class FXManager : AudioManager
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource confirmSelection, collectSound, hurtSound, dieSound, checkPointSound, switchPressedSound;
+
+    public static FXManager instance;
+
+    private void Start()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    public override void PlaySound(AudioSource sound)
     {
-        
+        sound.Stop();
+        sound.Play();
     }
 }
