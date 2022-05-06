@@ -19,7 +19,8 @@ public class EventSwitch : MonoBehaviour
         {
             isPressed = true;
             gameEvent.beginEvent();
-            
+            FXManager.instance.PlaySound(FXManager.instance.switchPressedSound);
+
         }
         else
         {

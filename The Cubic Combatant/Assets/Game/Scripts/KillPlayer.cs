@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
-    public PlayerSpawner spawn;
-    public Life life;
-    public LifeView view;
-    public HealthDisplay health;
-    public Player player;
-
-    public Health healthValue;
+    [SerializeField]
+    private PlayerSpawner spawn;
 
     [SerializeField]
-    public GameOverScreen screen;
+    private Life life;
 
     [SerializeField]
-    public GameObject gameOverScreen;
+    private LifeView view;
+
+    [SerializeField]
+    private HealthDisplay health;
+
+    [SerializeField]
+    private Player player;
+
+    [SerializeField]
+    private Health healthValue;
+
+    [SerializeField]
+    private GameOverScreen screen;
+
+    [SerializeField]
+    private GameObject gameOverScreen;
 
     public void Kill()
     {
+        FXManager.instance.PlaySound(FXManager.instance.dieSound);
         life.setValue(-1);
         health.healthBar.value = 0f;
         view.Display();

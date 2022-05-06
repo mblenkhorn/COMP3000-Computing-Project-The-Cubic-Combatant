@@ -20,6 +20,7 @@ public class LifePickup : Pickup
 
     public override void Collect()
     {
+        FXManager.instance.PlaySound(FXManager.instance.collectSound);
         manager.setValue(1);
         view.Display();
         Destroy(gameObject);

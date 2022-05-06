@@ -7,6 +7,8 @@ public class GameOverScreen : MonoBehaviour, IMenu, IScreen, IStart
 {
    public void open(GameObject menuToOpen)
    {
+       MusicManager.instance.PlaySound(MusicManager.instance.gameOverMusic);
+       MusicManager.instance.music.Stop();
        menuToOpen.SetActive(true);
    }
 

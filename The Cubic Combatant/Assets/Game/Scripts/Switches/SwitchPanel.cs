@@ -22,6 +22,7 @@ public class SwitchPanel : MonoBehaviour
         {
             setMaterial();
             platformEvent.beginEvent();
+            FXManager.instance.PlaySound(FXManager.instance.switchPressedSound);
         }
         else
         {

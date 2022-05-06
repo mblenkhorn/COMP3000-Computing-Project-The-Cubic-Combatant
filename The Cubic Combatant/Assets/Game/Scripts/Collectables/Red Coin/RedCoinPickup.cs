@@ -17,6 +17,7 @@ public class RedCoinPickup : Pickup
 
     public override void Collect()
     {
+        FXManager.instance.PlaySound(FXManager.instance.collectSound);
         manager.setValue(1);
         gameObject.SetActive(false);
     }

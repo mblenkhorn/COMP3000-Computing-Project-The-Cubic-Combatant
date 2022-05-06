@@ -16,6 +16,7 @@ public class EnemyDamage : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isDamaged)
         {
+            FXManager.instance.PlaySound(FXManager.instance.hurtSound);
             manager.setValue(-2f);
             isDamaged = true;
             StartCoroutine(WaitForDamage());
