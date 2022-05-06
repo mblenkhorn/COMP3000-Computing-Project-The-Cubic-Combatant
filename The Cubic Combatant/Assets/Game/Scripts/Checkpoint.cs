@@ -26,6 +26,7 @@ public class Checkpoint : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             setCheckPoint();
+            FXManager.instance.PlaySound(FXManager.instance.checkPointSound);
         }
     }
 }
