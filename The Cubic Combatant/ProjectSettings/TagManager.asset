@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IceFloor
   - Star
+  - Platform
   layers:
   - Default
   - TransparentFX

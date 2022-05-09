@@ -7,6 +7,8 @@ public class WinScreen : MonoBehaviour, IMenu, IScreen
 {
     public void open(GameObject menuToOpen)
     {
+        MusicManager.instance.PlaySound(MusicManager.instance.victoryMusic);
+        MusicManager.instance.music.Stop();
         menuToOpen.SetActive(true);
     }
 
